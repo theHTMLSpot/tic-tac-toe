@@ -2,19 +2,9 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
 
 .App-header {
-  background-color: #282c34;
+  background-color: #180447;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -23,16 +13,50 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
-
-.App-link {
-  color: #61dafb;
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Defines 3 equal columns */
+  width: 45vw;
+  height: 45vw;
+  column-gap: 10px;
+  row-gap: 10px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.board-spot {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%; /* Ensures each spot takes the full width of its grid cell */
+  height: 15vw; /* Sets the height proportionally to ensure it fits within the 45vw board */
+  box-sizing: border-box; /* Includes border in the element's total width and height */
+  border-radius: 10%;
+  background-color:  #4218a3;
+}
+.board-spot h3{
+  font-size: 3em;
+  text-align: center;
+}
+.hidden
+{
+  display: none;
+  
+}
+
+.x
+{
+  color: #ffbb00;
+}
+.o{
+  color: #00b3ff;
+}
+
+.scoreboard
+{
+  display: flex;
+  padding: 10px;
+  justify-content: center;
+  align-items: center;
+}
+.scoreboard p {
+  margin: 10px;
 }
